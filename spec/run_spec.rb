@@ -44,9 +44,10 @@ describe 'Names Challenge' do
 
       
       # run 2 times to see if the element is an array and the length of each array is 8
+
       2.times do |iterator|
         expect(r_split[iterator]).to be_an(Array)
-        puts r_split[iterator]
+        #puts r_split[iterator]
         expect(r_split[iterator].length()).to eq(8)
       end
         #expect that both arrays within multi_d_array are random

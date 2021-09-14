@@ -48,17 +48,18 @@ end
 def random_team_split(names)
   
   count = 0 
-  teamsarray = []
-  newarray = [[],[]]
+  newarray = [],[]
   while count < names.count
-    randomname = names.shuffle.first # suffles the array and outputs one element 
-    teamsarray.append(randomname)
+    randomname = names.sample # suffles the array and outputs one element 
+    newarray[0] << (randomname)
     names.delete(randomname)
 
     count += 1
   end
-   newarray[0] << teamsarray
-   newarray[1] << names
+   
+  names.each do |element|
+    newarray[1] << element
+  end
 
 return newarray
 
