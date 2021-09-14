@@ -16,7 +16,7 @@ describe 'Names Challenge' do
 
   context '#names_list_alphabetical' do
     it 'returns a string with each name in "names" alphabetically' do 
-      expect(names_list_alphabetical(NAMES.sort)).to eq(NAMES.sort.join(","))
+      expect(names_list_alphabetical(NAMES)).to eq(NAMES.sort.join(","))
     end
   end
 
@@ -52,7 +52,6 @@ describe 'Names Challenge' do
         #expect that both arrays within multi_d_array are random
        flat_array = r_split.flatten
        expect(flat_array).not_to eq(NAMES)
-      #expect that multi_d_array[0] is unique to multi_d_array[1]
        expect(r_split[0]).not_to eq(r_split[1])
     end
   end

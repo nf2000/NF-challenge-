@@ -23,10 +23,9 @@ end
 
 def names_list(names)
   # returns a string with each name in 'names' with a comma between them
-  #names.each do |x|
-    #puts "#{x} , "
+  
     return "#{names.join(",")}"
- #ß end
+
 
 end
 
@@ -34,10 +33,7 @@ def names_list_alphabetical(names)
   # returns a string with each name in 'names' with a comma between them in alphabetical order
   sortedarray = names.sort
   return "#{sortedarray.join(",")}"
-=begin
-  sortedarray.each do |x|
-    puts "#{x} , "
-=end
+
     
 end
 
@@ -48,8 +44,6 @@ def random_name(names)
   return randomname = names[randomno] # returing the name at that random generated index
 
 end
-
-
 
 def random_team_split(names)
   
@@ -63,14 +57,9 @@ def random_team_split(names)
 
     count += 1
   end
-  #newarray.append(teamsarray,names)
    newarray[0] << teamsarray
    newarray[1] << names
-=begin
-   2.times do |iterator|
-    puts "#{newarray[iterator]}"
-   end
-=end
+
 return newarray
 
 
